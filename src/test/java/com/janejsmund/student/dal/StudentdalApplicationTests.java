@@ -35,8 +35,8 @@ public class StudentdalApplicationTests {
 	public void testFindStudentById() {
 
         Student student;
-	    if (studentRepository.findById(1l).isPresent()) {
-            student = studentRepository.findById(1l).get();
+	    if (studentRepository.findById(1L).isPresent()) {
+            student = studentRepository.findById(1L).get();
 			System.out.println(student);
         }
 
@@ -46,8 +46,8 @@ public class StudentdalApplicationTests {
 	public void testUpdateStudent() {
 
 		Student student;
-		if (studentRepository.findById(1l).isPresent()) {
-			student = studentRepository.findById(1l).get();
+		if (studentRepository.findById(1L).isPresent()) {
+			student = studentRepository.findById(1L).get();
 			student.setFee(50d);
 			studentRepository.save(student);
 		}
@@ -55,7 +55,7 @@ public class StudentdalApplicationTests {
 
 	@Test
     public void testDeleteStudent() {
-	    studentRepository.deleteById(1l);
+	    studentRepository.deleteById(1L);
     }
 
     @Test
@@ -70,16 +70,16 @@ public class StudentdalApplicationTests {
 
     @Test
     public void testFindCustomerById() {
-	    if (customerRepository.findById(1l).isPresent()) {
-	        Customer customer = customerRepository.findById(1l).get();
+	    if (customerRepository.findById(1L).isPresent()) {
+	        Customer customer = customerRepository.findById(1L).get();
             System.out.println(customer);
         }
     }
 
     @Test
     public void testUpdateCustomer() {
-        if (customerRepository.findById(1l).isPresent()) {
-            Customer customer = customerRepository.findById(1l).get();
+        if (customerRepository.findById(1L).isPresent()) {
+            Customer customer = customerRepository.findById(1L).get();
             customer.setEmail("another@mail.com");
             customerRepository.save(customer);
         }
@@ -87,7 +87,7 @@ public class StudentdalApplicationTests {
 
     @Test
     public void testDeleteCustomer() {
-	    customerRepository.deleteById(1l);
+	    customerRepository.deleteById(1L);
     }
 
 }
